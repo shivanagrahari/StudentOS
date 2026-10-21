@@ -1,6 +1,23 @@
 * {
     margin: 0;
     padding: 0;
+    
+    
+    
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+#app, .app-container, .dashboard {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
     box-sizing: border-box;
 }
 
@@ -33,15 +50,16 @@ button {
 }
 
 .dashboard {
-    display: flex;
+    display: grid;
+    grid-template-columns: clamp(132px, 20vw, 172px) minmax(0, 1fr);
     min-height: 100vh;
 }
 
 /* SIDEBAR */
 
 .sidebar {
-    width: 172px;
-    min-width: 172px;
+    width: clamp(132px, 20vw, 172px);
+    min-width: clamp(132px, 20vw, 172px);
     flex-shrink: 0;
     background: var(--sidebar);
     border-right: 1px solid var(--border);
@@ -172,7 +190,7 @@ button {
 /* MAIN CONTENT */
 
 .main-content {
-    flex: 1;
+    width: auto;
     min-width: 0;
     padding: 0;
 }
@@ -264,8 +282,8 @@ button {
 .main-content > .welcome,
 .main-content > .goals-section,
 .main-content > .bottom-grid {
-    margin-left: 22px;
-    margin-right: 22px;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 
 .main-content > .welcome {
@@ -580,7 +598,7 @@ button {
 
 .bottom-grid {
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: 1.8fr 1fr;
     gap: 14px;
     margin-top: 14px;
 }
@@ -786,10 +804,10 @@ dialog::backdrop {
     }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 600px) {
     .sidebar {
-        width: 172px;
-        min-width: 172px;
+        width: clamp(132px, 20vw, 172px);
+        min-width: clamp(132px, 20vw, 172px);
     }
 
     .main-content {
@@ -813,14 +831,14 @@ dialog::backdrop {
     }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 520px) {
     .dashboard {
         min-width: 0;
     }
 
     .sidebar {
-        width: 172px;
-        min-width: 172px;
+        width: clamp(132px, 20vw, 172px);
+        min-width: clamp(132px, 20vw, 172px);
         padding: 15px 11px 0;
     }
 

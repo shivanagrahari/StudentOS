@@ -287,12 +287,6 @@ document.addEventListener("DOMContentLoaded", () => {
         showToast("You're all caught up.");
     });
 
-    // SIDEBAR PLACEHOLDERS
-    $("#aiNavLink")?.addEventListener("click", (event) => {
-        event.preventDefault();
-        showToast("AI Assistant is coming soon.");
-    });
-
     $("#settingsLink")?.addEventListener("click", (event) => {
         event.preventDefault();
         showToast("Settings will be available soon.");

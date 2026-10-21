@@ -1,5 +1,7 @@
 
 const TAB_PAGES = {
+    personal: "Personal.html",
+    education: "education.html",
     achievements: "profile1.html",
     goals: "profile2.html",
     projects: "profile3.html",
@@ -184,12 +186,6 @@ document.getElementById("notificationBtn")?.addEventListener("click", () => {
 // Public profile button
 document.getElementById("publicProfileBtn")?.addEventListener("click", () => {
     showToast("Public profile preview is not connected yet.");
-});
-
-// Placeholder navigation
-document.getElementById("aiNavLink")?.addEventListener("click", (event) => {
-    event.preventDefault();
-    showToast("AI Assistant page is not connected yet.");
 });
 
 document.getElementById("settingsLink")?.addEventListener("click", (event) => {

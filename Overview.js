@@ -156,12 +156,12 @@ document.querySelectorAll(".nav-link").forEach((link) => {
     link.addEventListener("click", (event) => {
         const href = link.getAttribute("href");
 
-        // Let the browser navigate to another HTML page.
+        // Let the browser navigate to real pages like SettingsPrivacy.html.
         if (href && href !== "#") {
             return;
         }
 
-        // Only handle placeholder links.
+        // Only block placeholder links that do not navigate anywhere.
         event.preventDefault();
 
         document.querySelectorAll(".nav-link").forEach((item) => {
