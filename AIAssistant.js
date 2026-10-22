@@ -2,12 +2,11 @@ const questionInput = document.getElementById("question");
 const sendButton = document.getElementById("sendBtn");
 const chatCard = document.querySelector(".chat-card");
 const suggestionButtons = document.querySelectorAll(".suggestions button");
-
 const GEMINI_API_KEY = "";
 const GEMINI_MODEL = "gemini-2.5-flash";
+
 const GEMINI_API_URL =
     `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
-
 let isSending = false;
 
 function addUserMessage(message) {

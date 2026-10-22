@@ -29,7 +29,19 @@ function activateSettingsTab(tab) {
 }
 
 settingsTabs.forEach((tab, index) => {
-  tab.addEventListener("click", () => activateSettingsTab(tab));
+  tab.addEventListener("click", () => {
+    if (tab.id === "permissionsTab") {
+      window.location.href = "./AccessPermission.html";
+      return;
+    }
+
+    if (tab.id === "dataTab") {
+      window.location.href = "./AIAssi.html";
+      return;
+    }
+
+    activateSettingsTab(tab);
+  });
   tab.addEventListener("keydown", (event) => {
     if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") {
       return;
